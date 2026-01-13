@@ -124,11 +124,10 @@
     }
 
     .qr-container img {
-      max-width: 200px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
+    max-width: 100%;
+    width: 180px;
+}
+
 
     footer {
       text-align: center;
@@ -139,16 +138,30 @@
     }
 
     @media (max-width: 768px) {
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    .contact-container {
-        flex-direction: column;
-        gap: 20px;
-    }
+header nav a {
+    margin: 5px;
+    font-size: 1em;
+    padding: 6px 10px;
+}
+.container {
+    margin: 20px 10px;
+    padding: 15px;
+}
 
-    .contact-info {
-        text-align: center;
-        font-size: 15px;
-    }
+    ..container .contact-info a {
+    display: block;
+    margin: 8px 0;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #333;
+}
+
 
     .contact-form input,
     .contact-form textarea {
@@ -161,12 +174,25 @@
 }
 
     @media (max-width: 480px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+}
     .contact h2 {
         font-size: 22px;
     }
 
     .contact-info {
         font-size: 14px;
+    }
+}
+.contact-form input,
+.contact-form textarea {
+    font-size: 16px; /* prevents mobile zoom */
+}
+.qr-container img {
+        width: 150px;
     }
 }
 
@@ -228,4 +254,5 @@
   </footer>
 </body>
 </html>
+
 
