@@ -34,13 +34,15 @@
     }
 
     header img {
-        width: 180px;
-        height: auto;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        z-index: 2;
-    }
+    width: 140px;
+    max-width: 45%;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
 
     header h1,
     header p,
@@ -187,6 +189,50 @@
             padding: 7px 12px;
         }
     }
+
+	  @media (max-width: 768px) {
+
+    header {
+        padding: 80px 15px 40px;
+    }
+
+    header img {
+        position: static;
+        display: block;
+        margin: 0 auto 15px;
+        width: 120px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    header a {
+        display: inline-block;
+        margin: 5px 5px;
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+}
+
+	  @media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header p {
+        font-size: 12px;
+    }
+
+    header img {
+        width: 100px;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -531,5 +577,6 @@
 </footer>
 </body>
 </html>
+
 
 
