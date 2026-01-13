@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWADKALA</title>
+  <style>
+    body {
+        font-family: Apricots, Apricots;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+
+    header {
+        background: linear-gradient(rgba(58, 44, 34, 0.85), rgba(32, 45, 64, 0.85)), url('img.png');
+        background-size: cover;
+        background-position: center;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 50px 20px;
+        position: relative;
+    }
+
+    header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* Optional dark overlay for better text visibility */
+        z-index: 1;
+    }
+
+    header img {
+        width: 180px;
+        height: auto;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+    }
+
+    header h1,
+    header p,
+    header a {
+        position: relative;
+        z-index: 2;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    header p {
+        margin: 10px 0 20px;
+        font-size: 1.2em;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0 10px;
+        padding: 8px 15px;
+        border: 2px solid white;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header a:hover {
+        background-color: white;
+        color: #ff4d4d;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    .category {
+        margin-bottom: 40px;
+    }
+
+    .category h2 {
+        color: #ff4d4d;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ff4d4d;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .item-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+
+    .item-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .item-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .item-card h3 {
+        margin: 15px 0 5px;
+        color: #333;
+    }
+
+    .item-card p {
+        color: #666;
+        margin: 0 0 10px;
+    }
+
+    .item-desc {
+        font-size: 0.9em;
+        color: #999;
+        margin: 0 0 15px;
+    }
+
+    .buy-now {
+        background-color: #ff4d4d;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .buy-now:hover {
+        background-color: #cc3c3c;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #ff4d4d;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .contact {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 1.1em;
+    }
+
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2em;
+        }
+
+        header p {
+            font-size: 1em;
+        }
+
+        .item-card {
+            width: 100%;
+        }
+
+        header a {
+            font-size: 0.9em;
+            padding: 7px 12px;
+        }
+    }
+</style>
+</head>
+<body>
+  <header>
+    <img src="img.png" alt="SWADKALA img">
+    <h1>SWADKALA</h1>
+    <p>Made with Care, Served with Purpose</p>
+<nav>
+<a href="about_us.html">About Us</a>
+     
+      <a href="contact.html">Contact Us</a>
+  </header>
+
+  <div class="container">
+    <div class="category">
+      <h2>Handmade Crochet Articles</h2>
+      <div class="items">
+        <div class="item-card">
+          <img src="product1.jpg" alt="Butterfly Keychain">
+          <h3>Butterfly Keychain</h3>
+          <p>&#8377;60 EACH</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+        <div class="item-card">
+          <img src="product2.jpg" alt="Bow Hairclip">
+          <h3>Bow Hairclip</h3>
+          <p>&#8377;80 EACH</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+         <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+        <div class="item-card">
+          <img src="product3.jpg" alt="Sunflower Keychain">
+          <h3>Sunflower Keychain</h3>
+          <p>&#8377;85</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+        <div class="item-card">
+          <img src="product4.jpg" alt="Kitty Keychain">
+          <h3>Kitty Keychain</h3>
+          <p>&#8377;85</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+         <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+        <div class="item-card">
+          <img src="product5.jpg" alt="Bow Keychain">
+          <h3>Bow Keychain</h3>
+          <p>&#8377;85</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+        <div class="item-card">
+          <img src="product6.jpg" alt="Tulip">
+          <h3>Tulip</h3>
+          <p>&#8377;150</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+        <div class="item-card">
+          <img src="product7.jpg" alt="Rose">
+          <h3>Rose</h3>
+          <p>&#8377;150</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+<a href="order_now.html" class="buy-now">Order Now</a>
+</div>
+        <div class="item-card">
+          <img src="product8.jpg" alt="Duck Keychain">
+          <h3>Duck Keychain</h3>
+          <p>&#8377;150</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+         <a href="order_now.html" class="buy-now">Order Now</a>
+ </div>
+ <div class="item-card">
+          <img src="product9.jpg" alt="Kitty Keychain (2)">
+          <h3>Kitty Keychain (2)</h3>
+          <p>&#8377;150</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+         <a href="order_now.html" class="buy-now">Order Now</a>
+ </div>
+ <div class="item-card">
+          <img src="product10.jpg" alt="Spiderman Keychain">
+          <h3>Spiderman Keychain</h3>
+          <p>&#8377;150</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+         <a href="order_now.html" class="buy-now">Order Now</a>
+ </div>
+ <div class="item-card">
+          <img src="product11.jpg" alt="Lotus Hairclip">
+          <h3>Lotus Hairclip</h3>
+          <p>&#8377;250</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+         <a href="order_now.html" class="buy-now">Order Now</a>
+ </div>
+ <div class="item-card">
+          <img src="product12.jpg" alt="Sunflower">
+          <h3>Sunflower</h3>
+          <p>&#8377;250</p>
+          <p class="item-desc">Handmade Crochet Article!</p>
+         <a href="order_now.html" class="buy-now">Order Now</a>
+ </div>
+
+<div class="container">
+    <div class="category">
+      <h2>Eats & Drinks</h2>
+      <div class="items">
+        <div class="item-card">
+          <img src="product13.jpeg" alt="Walnut Brownie">
+          <h3>Walnut Brownie</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+        </div> 
+		
+
+        <div class="item-card">
+          <img src="product14.jpeg" alt="Biscoff Brownie">
+          <h3>Biscoff Brownie</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+        </div> 
+		
+    
+        <div class="item-card">
+          <img src="product15.jpeg" alt="Nutella Brownie">
+          <h3>Nutella Brownie</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+        </div> 
+		
+		
+        <div class="item-card">
+          <img src="product16.jpeg" alt="Classic Brownie">
+          <h3>Classic Brownie</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div> 
+		
+		<div class="item-card">
+          <img src="product17.jpeg" alt="Classic Dark Truffle">
+          <h3>Classic Dark Truffle</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div> 
+		
+			<div class="item-card">
+          <img src="product18.jpeg" alt="Hazelnut Truffle">
+          <h3>Hazelnut Truffle</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product19.jpeg" alt="Mocha Walnut Truffle">
+          <h3>Mocha Walnut Truffle</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product20.jpeg" alt="Caramel Truffle">
+          <h3>Caramel Truffle</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product21.jpeg" alt="Strawberry Cream Jar">
+          <h3>Strawberry Cream Jar</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product22.jpeg" alt="Pineapple Cream Jar">
+          <h3>Pineapple Cream Jar</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product23.jpeg" alt="Classic Cookies">
+          <h3>Classic Cookies</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product24.jpeg" alt="Double Chocolate Cookies">
+          <h3>Double Chocolate Cookies</h3>
+          <p>&#8377;00</p>
+          <p class="item-desc">Pure Dessert Joy!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product25.jpg" alt="Sprout Power Bhel">
+          <h3>Sprout Power Bhel</h3>
+          <p>&#8377;25</p>
+          <p class="item-desc">Bites Full of Flavour!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product26.jpg" alt="Mexican Corn Chat">
+          <h3>Mexican Corn Chat</h3>
+          <p>&#8377;25</p>
+          <p class="item-desc">Bites Full of Flavour!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product27.jpg" alt="Simple Corn Chat">
+          <h3>Simple Corn Chat</h3>
+          <p>&#8377;25</p>
+          <p class="item-desc">Bites Full of Flavour!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product28.jpg" alt="Chana Chat">
+          <h3>Chana Chat</h3>
+          <p>&#8377;25</p>
+          <p class="item-desc">Bites Full of Flavour!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product29.jpg" alt="Simple / Oli Bhel">
+          <h3>Simple / Oli Bhel</h3>
+          <p>&#8377;25</p>
+          <p class="item-desc">Bites Full of Flavour!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product30.jpg" alt="Classic Mint Bliss">
+          <h3>Classic Mint Bliss</h3>
+          <p>&#8377;65</p>
+          <p class="item-desc">“Refreshment in Every Sip!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product31.jpg" alt="Blue Lagoon">
+          <h3>Blue Lagoon</h3>
+          <p>&#8377;65</p>
+          <p class="item-desc">“Refreshment in Every Sip!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product32.jpg" alt="Kala Khatta">
+          <h3>Kala Khatta</h3>
+          <p>&#8377;65</p>
+          <p class="item-desc">“Refreshment in Every Sip!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product33.jpg" alt="Shikanji Shots">
+          <h3>Shikanji Shots</h3>
+          <p>&#8377;35</p>
+          <p class="item-desc">“Refreshment in Every Sip!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product34.jpg" alt="Shikanji Full Glass">
+          <h3>Shikanji Full Glass</h3>
+          <p>&#8377;45</p>
+          <p class="item-desc">“Refreshment in Every Sip!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product35.jpg" alt="Limbu Pani">
+          <h3>Limbu Pani</h3>
+          <p>&#8377;30</p>
+          <p class="item-desc">“Refreshment in Every Sip!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+		
+		<div class="item-card">
+          <img src="product36.jpg" alt="Jal Jeera">
+          <h3>Jal Jeera</h3>
+          <p>&#8377;30</p>
+          <p class="item-desc">“Refreshment in Every Sip!</p>
+          <a href="order_now.html" class="buy-now">Order Now</a>
+
+        </div>
+  <!-- Footer Section -->
+  <footer> <div class="footer-content">
+    <p>Reach out to SWADKALA contact us on  
+            <a href="tel:+918329987567" style="color: white; text-decoration: none;">+91 83299 87567</a>
+        </p>
+        <p>For any other help & support contact on  
+            <a href="tel:+919702453788" style="color: white; text-decoration: none;">+91 9702453788</a>
+        </p>
+
+        <a href="terms.html" target="_blank" style="color: white; text-decoration: none;">Terms & Conditions</a> | 
+        <a href="privacy.html" target="_blank" style="color: white; text-decoration: none;">Privacy Policy</a>
+        
+        <p>2026 SWADKALA | All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+</html>
