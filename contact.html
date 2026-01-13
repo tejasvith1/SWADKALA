@@ -1,258 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - SWADKALA</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - SWADKALA</title>
 
-    header {
-      background: linear-gradient(rgba(255, 77, 77, 0.9), rgba(255, 77, 77, 0.9)), url('logo.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+<style>
+/* ===== GLOBAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
 
-    header nav {
-      margin-top: 15px;
-    }
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(rgba(255,77,77,0.9), rgba(255,77,77,0.9)), url('img.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
 
-    header nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 1.2em;
-      font-weight: bold;
-      padding: 8px 15px;
-      border: 2px solid white;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s;
-    }
+header h1 {
+    margin-bottom: 10px;
+}
 
-    header nav a:hover {
-      background-color: white;
-      color: #ff4d4d;
-    }
+header nav {
+    margin-top: 15px;
+}
 
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 8px 14px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
 
-    .container h1 {
-      color: #ff4d4d;
-      margin-bottom: 20px;
-    }
+header nav a:hover {
+    background-color: white;
+    color: #ff4d4d;
+}
 
-    .container p {
-      font-size: 1.2em;
-      line-height: 1.8;
-      color: #555;
-    }
-
-  .contact {
+/* ===== CONTACT SECTION ===== */
+.contact {
     padding: 40px 20px;
     background-color: #f4f4f4;
 }
 
 .contact h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    color: #333;
 }
 
 .contact-container {
-    max-width: 1000px;
+    max-width: 600px;
     margin: auto;
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.contact-info {
-    flex: 1;
-    font-size: 16px;
-}
-
-.contact-info p {
-    margin-bottom: 15px;
-}
-
+/* ===== FORM ===== */
 .contact-form {
-    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .contact-form button {
-    background-color: #3a2c22;
+    background-color: #25D366;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .contact-form button:hover {
-    background-color: #202d40;
+    background-color: #1ebe5d;
 }
 
-    .qr-container {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .qr-container img {
-    max-width: 100%;
-    width: 180px;
-}
-
-
-    footer {
-      text-align: center;
-      background-color: #ff4d4d;
-      color: white;
-      padding: 10px;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 768px) {
-header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-header nav a {
-    margin: 5px;
-    font-size: 1em;
-    padding: 6px 10px;
-}
+/* ===== FEEDBACK / QR SECTION ===== */
 .container {
-    margin: 20px 10px;
-    padding: 15px;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
 }
 
-    ..container .contact-info a {
-    display: block;
-    margin: 8px 0;
+.container h1 {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+
+.container p {
     font-size: 1.1em;
-    text-decoration: none;
-    color: #333;
+    color: #555;
 }
 
+.qr-container {
+    margin-top: 25px;
+}
 
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 14px;
+.qr-container img {
+    width: 180px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .contact-form button {
-        width: 100%;
+    header nav a {
+        margin: 5px;
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+
+    .contact-container {
+        padding: 20px;
     }
 }
 
-    @media (max-width: 480px) {
-
+@media (max-width: 480px) {
     header h1 {
         font-size: 22px;
     }
-}
+
     .contact h2 {
         font-size: 22px;
     }
 
-    .contact-info {
-        font-size: 14px;
-    }
-}
-.contact-form input,
-.contact-form textarea {
-    font-size: 16px; /* prevents mobile zoom */
-}
-.qr-container img {
+    .qr-container img {
         width: 150px;
     }
 }
-
-  </style>
+</style>
 </head>
+
 <body>
-  <header>
+
+<!-- ===== HEADER ===== -->
+<header>
     <h1>Contact Us</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about_us.html">About Us</a>
-      
-      <a href="contact.html">Contact Us</a>
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
-  </header>
+</header>
+
+<!-- ===== CONTACT FORM ===== -->
 <section class="contact">
-    <h2>Contact Us</h2>
+    <h2>Send Us a Message</h2>
 
     <div class="contact-container">
-        <div class="contact-info">
-            <p><strong>Phone:</strong> +91 9702453788</p>
-            <p><strong>Email:</strong> support@swadkala.com</p>
-            <p><strong>Location:</strong> Kalyan, Maharashtra</p>
-        </div>
-
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
+        <form class="contact-form" onsubmit="sendWhatsAppMessage(); return false;">
+            <input type="text" id="wa-name" placeholder="Your Name" required>
+            <input type="email" id="wa-email" placeholder="Your Email" required>
+            <textarea id="wa-message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message on WhatsApp</button>
         </form>
     </div>
 </section>
 
-  <div class="container">
-    <h1>Get in Touch</h1>
-    <p>Have any questions or feedback for us? Feel free to reach out! We're always happy to help.</p>
-
-    <div class="contact-info">
-      <p><strong>Reach out to us:</strong></p>
-      <a href="tel:+918329987567">📞 +91 83299 87567</a>
-
-      <p><strong>For any help & support:</strong></p>
-      
-      <a href="tel:+919702453788">📞 +91 9702453788</a>
-    </div>
+<!-- ===== FEEDBACK SECTION ===== -->
+<div class="container">
+    <h1>Feedback</h1>
+    <p>We value your feedback. Scan the QR code below to share your thoughts.</p>
 
     <div class="qr-container">
-      <h2>Give Your Feedback</h2>
-      <p>We value your feedback! Scan the QR code below:</p>
-      <img src="feedback.png" alt="Feedback QR Code">
+        <img src="feedback.png" alt="Feedback QR Code">
     </div>
 
     <p>We look forward to serving you!</p>
-  </div>
+</div>
 
-  <footer>
+<!-- ===== FOOTER ===== -->
+<footer>
     <p>2026 SWADKALA | All Rights Reserved</p>
-  </footer>
+</footer>
+
+<!-- ===== WHATSAPP SCRIPT ===== -->
+<script>
+function sendWhatsAppMessage() {
+    const name = document.getElementById("wa-name").value;
+    const email = document.getElementById("wa-email").value;
+    const message = document.getElementById("wa-message").value;
+
+    const phoneNumber = "918329987567";
+    const text =
+        `Hello SWADKALA,%0A%0A` +
+        `Name: ${name}%0A` +
+        `Email: ${email}%0A` +
+        `Message: ${message}`;
+
+    window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
+}
+</script>
+
 </body>
 </html>
-
-
