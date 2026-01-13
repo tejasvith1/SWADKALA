@@ -12,28 +12,32 @@
         background-color: #f9f9f9;
     }
 
-    header {
-        background: linear-gradient(rgba(255, 77, 77, 0.9), rgba(255, 77, 77, 0.9)), url('img.png');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        text-align: center;
-        padding: 60px 15px 40px;
-        position: relative;
-    }
 
-    header::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4); /* Optional dark overlay for better text visibility */
-        z-index: 1;
-    }
+/* Header styling */
+header {
+    background: linear-gradient(rgba(255, 77, 77, 0.9), rgba(255, 77, 77, 0.9)), url('img.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 15px 40px;
+    position: relative;
+}
 
-    header img {
+/* Optional dark overlay for text readability */
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Header logo */
+header img {
     width: 140px;
     max-width: 45%;
     height: auto;
@@ -43,195 +47,64 @@
     z-index: 2;
 }
 
+/* Header texts & nav buttons above overlay */
+header h1,
+header p,
+header .nav-buttons {
+    position: relative;
+    z-index: 2;
+}
 
-    header h1,
-    header p,
-    header a {
-        position: relative;
-        z-index: 2;
-    }
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
 
-    header h1 {
-        margin: 0;
-        font-size: 2.5em;
-    }
+header p {
+    margin: 10px 0 20px;
+    font-size: 1.2em;
+}
 
-    header p {
-        margin: 10px 0 20px;
-        font-size: 1.2em;
-    }
-/* Navigation buttons */
-  .nav-buttons {
+/* Navigation buttons container */
+.nav-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap;
-  }
+    flex-wrap: wrap; /* allows buttons to wrap on small screens */
+    margin-top: 15px;
+}
 
-  .nav-buttons a {
-    color: white;             /* Text white */
-    background-color: transparent; /* Transparent background */
+/* Navigation buttons styling */
+.nav-buttons a {
+    color: white; /* text color white */
+    background-color: transparent; /* transparent background */
     text-decoration: none;
     font-size: 1em;
     font-weight: bold;
     padding: 8px 20px;
-    border: 2px solid white;  /* White border */
+    border: 2px solid white; /* white border */
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
+}
 
-  .nav-buttons a:hover {
-    background-color: white;  /* White hover background */
-    color: #ff4d4d;           /* Red hover text */
-  }
+.nav-buttons a:hover {
+    background-color: white;  /* hover background white */
+    color: #ff4d4d;           /* hover text red */
+}
 
-  @media (max-width: 768px) {
+/* Responsive header adjustments */
+@media (max-width: 768px) {
     header h1 {
-      font-size: 2em;
+        font-size: 2em;
     }
 
     header p {
-      font-size: 1em;
+        font-size: 1em;
     }
 
     .nav-buttons a {
-      padding: 8px 15px;
-      font-size: 0.95em;
-    }
-  }
-    header a {
-        color: white;
-        text-decoration: none;
-        font-size: 1em;
-        font-weight: bold;
-        margin: 0 10px;
-        padding: 8px 15px;
-        border: 2px solid white;
-        border-radius: 5px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    header a:hover {
-        background-color: white;
-        color: #ff4d4d;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 0 20px;
-    }
-
-    .category {
-        margin-bottom: 40px;
-    }
-
-    .category h2 {
-        color: #ff4d4d;
-        text-transform: uppercase;
-        border-bottom: 2px solid #ff4d4d;
-        display: inline-block;
-        margin-bottom: 20px;
-    }
-
-    .items {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .item-card {
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        width: 250px;
-        text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
-    }
-
-    .item-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .item-card img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .item-card h3 {
-        margin: 15px 0 5px;
-        color: #333;
-    }
-
-    .item-card p {
-        color: #666;
-        margin: 0 0 10px;
-    }
-
-    .item-desc {
-        font-size: 0.9em;
-        color: #999;
-        margin: 0 0 15px;
-    }
-
-    .buy-now {
-        background-color: #ff4d4d;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-bottom: 15px;
-        font-weight: bold;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .buy-now:hover {
-        background-color: #cc3c3c;
-    }
-
-    footer {
-        text-align: center;
-        background-color: #ff4d4d;
-        color: white;
-        padding: 10px;
-        margin-top: 20px;
-    }
-
-    .contact {
-        margin-top: 40px;
-        text-align: center;
-        font-size: 1.1em;
-    }
-
-    @media (max-width: 768px) {
-        header h1 {
-            font-size: 2em;
-        }
-
-        header p {
-            font-size: 1em;
-        }
-
-        .item-card {
-            width: 100%;
-        }
-
-        header a {
-            font-size: 0.9em;
-            padding: 7px 12px;
-        }
-    }
-
-	  @media (max-width: 768px) {
-
-    header {
-        padding: 80px 15px 40px;
+        padding: 6px 12px;
+        font-size: 0.95em;
     }
 
     header img {
@@ -240,24 +113,9 @@
         margin: 0 auto 15px;
         width: 120px;
     }
-
-    header h1 {
-        font-size: 22px;
-    }
-
-    header p {
-        font-size: 13px;
-    }
-
-    header a {
-        display: inline-block;
-        margin: 5px 5px;
-        padding: 6px 12px;
-        font-size: 0.9em;
-    }
 }
 
-	  @media (max-width: 480px) {
+@media (max-width: 480px) {
     header h1 {
         font-size: 20px;
     }
@@ -266,23 +124,127 @@
         font-size: 12px;
     }
 
+    .nav-buttons a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
     header img {
         width: 100px;
     }
 }
 
+/* Container for page content */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Category sections */
+.category {
+    margin-bottom: 40px;
+}
+
+.category h2 {
+    color: #ff4d4d;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff4d4d;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Items grid */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual item card */
+.item-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-card h3 {
+    margin: 15px 0 5px;
+    color: #333;
+}
+
+.item-card p {
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.item-desc {
+    font-size: 0.9em;
+    color: #999;
+    margin: 0 0 15px;
+}
+
+/* Buy Now button */
+.buy-now {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.buy-now:hover {
+    background-color: #cc3c3c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.contact {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.1em;
+}
 </style>
-</head>
-<body>
+
   <header>
     <img src="img.png" alt="SWADKALA img">
     <h1>SWADKALA</h1>
     <p>Made with Care, Served with Purpose</p>
-<nav>
-<a href="about_us.html">About Us</a>
-     
-      <a href="contact.html">Contact Us</a>
-  </header>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <a href="about_us.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</header>
 
   <div class="container">
     <div class="category">
@@ -615,6 +577,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
