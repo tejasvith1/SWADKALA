@@ -122,28 +122,97 @@
         text-decoration: none;
     }
 
+/* MENU GRID - RESPONSIVE */
 .menu {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
     margin-top: 20px;
 }
 
+/* MENU ITEM */
 .menu-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
 }
 
+/* IMAGE RESPONSIVE */
 .menu-item img {
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    max-width: 140px;
+    height: auto;
     object-fit: cover;
     border-radius: 12px;
+    margin-bottom: 10px;
 }
 
+/* QUANTITY INPUT */
 .menu-item input {
-    width: 60px;
+    width: 100%;
+    max-width: 80px;
     text-align: center;
+    font-size: 16px; /* prevents mobile zoom */
+    padding: 8px;
+    margin-top: 8px;
 }
+
+/* NOTE BOX */
+.note {
+    background-color: #ffeb3b;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* ================= MOBILE FIXES ================= */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    header img {
+        width: 80px;
+        top: 10px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+    header {
+        padding: 35px 15px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu-item img {
+        max-width: 120px;
+    }
+}
+
 
 .note {
     background-color: #ffeb3b; /* Yellow background */
@@ -600,6 +669,7 @@ document.querySelectorAll('.quantity').forEach(input => {
   </script>
 </body>
 </html>
+
 
 
 
