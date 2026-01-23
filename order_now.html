@@ -511,7 +511,12 @@ const itemPrices = {
 "Shikanji Shots": 35,
 "Shikanji Full Glass": 45,
 "Limbu Pani": 30,
-"Jal Jeera": 30,    
+"Jal Jeera": 30,
+"Idli": 30,
+"Podi Idli": 40,
+"Masala Idli": 45,
+"Mini Idli": 45,
+"Stuffed Idli": 45,	
 };
 
 // Function to calculate total price
@@ -556,7 +561,6 @@ document.querySelectorAll('.quantity').forEach(input => {
     const form = document.getElementById('order-form');
     const name = form.querySelector('#name').value.trim();
     const className = form.querySelector('#class').value.trim();
-    const landmark = form.querySelector('#landmark').value;
     const specialInstructions = form.querySelector('#special-instructions').value.trim();
     const paymentMethod = form.querySelector('input[name="payment_method"]:checked')?.value;
 
@@ -583,7 +587,6 @@ document.querySelectorAll('.quantity').forEach(input => {
     message += `*Name:* ${name}\n`;
     message += `*Class:* ${className}\n`;
     message += `*Items Ordered:*\n${orderItems.join('\n')}\n`;
-    message += `*Delivery Location:* ${landmark}\n`;
     message += `*Payment Method:* ${paymentMethod}\n`;
 
     if (specialInstructions) {
@@ -597,6 +600,7 @@ document.querySelectorAll('.quantity').forEach(input => {
   </script>
 </body>
 </html>
+
 
 
 
