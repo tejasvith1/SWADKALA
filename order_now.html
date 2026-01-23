@@ -4,20 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SWADKALA - Order Now</title>
-  <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
-    }
+ <style>
+/* ================= GLOBAL ================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
 
-   header {
-    background: linear-gradient(rgba(255, 77, 77, 0.8), rgba(255, 77, 77, 0.8)), url('img.png');
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(rgba(255, 77, 77, 0.8), rgba(255, 77, 77, 0.8)),
+                url('img.png');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 40px 20px;
+    padding: 45px 20px;
     position: relative;
 }
 
@@ -30,16 +33,15 @@ header::after {
     z-index: 1;
 }
 
-/* CONTENT WRAPPER */
+/* HEADER CONTENT (same behavior as index page) */
 .header-content {
     position: relative;
     z-index: 2;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
     text-align: center;
+    gap: 6px;
 }
 
 /* LOGO */
@@ -48,168 +50,139 @@ header::after {
     height: auto;
 }
 
-/* HEADING */
+/* NAME */
 .header-content h1 {
     margin: 0;
     font-size: 2.4em;
-    white-space: nowrap;
+    line-height: 1.2;
 }
 
 /* TAGLINE */
 .header-content p {
-    width: 100%;
-    margin-top: 8px;
+    margin: 0;
     font-size: 1.1em;
 }
 
-/* MOBILE FIX */
-@media (max-width: 480px) {
-
-    .header-content {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .header-content img {
-        width: 70px;
-    }
-
-    .header-content h1 {
-        font-size: 1.6em;
-    }
-
-    .header-content p {
-        font-size: 0.95em;
-    }
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
+/* ================= FORM ================= */
+.form-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .container {
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 0 20px;
-    }
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
 
-    .form-section {
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* prevents mobile zoom */
+}
 
-    label {
-        font-weight: bold;
-        margin-bottom: 5px;
-        display: block;
-    }
+button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-    input, select, textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
+button:hover {
+    background-color: #cc3c3c;
+}
 
-    button {
-        background-color: #ff4d4d;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    button:hover {
-        background-color: #cc3c3c;
-    }
-
-    .qr-container {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .qr-container img {
-        max-width: 200px;
-        margin-bottom: 10px;
-    }
-
-    footer {
-        text-align: center;
-        background-color: #ff4d4d;
-        color: white;
-        padding: 10px;
-        margin-top: 20px;
-    }
-
-    footer a {
-        color: white;
-        text-decoration: none;
-    }
-
-/* MENU GRID - RESPONSIVE */
+/* ================= MENU GRID (MATCH INDEX) ================= */
 .menu {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 25px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
-/* MENU ITEM */
+/* PRODUCT BOX */
 .menu-item {
     background: #fff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
     text-align: center;
 }
 
-/* IMAGE RESPONSIVE */
+/* PRODUCT IMAGE */
 .menu-item img {
     width: 100%;
-    max-width: 140px;
+    max-width: 150px;
     height: auto;
-    object-fit: cover;
     border-radius: 12px;
     margin-bottom: 10px;
 }
 
 /* QUANTITY INPUT */
 .menu-item input {
-    width: 100%;
-    max-width: 80px;
+    max-width: 90px;
+    margin: 8px auto 0;
     text-align: center;
-    font-size: 16px; /* prevents mobile zoom */
-    padding: 8px;
-    margin-top: 8px;
 }
 
-/* NOTE BOX */
+/* ================= NOTE ================= */
 .note {
     background-color: #ffeb3b;
     padding: 15px;
     margin: 20px 0;
     border-radius: 8px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bold;
+    color: #333;
 }
 
-/* ================= MOBILE FIXES ================= */
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= MOBILE (IMPORTANT FIX) ================= */
 @media (max-width: 768px) {
 
-    header h1 {
-        font-size: 2em;
+    header {
+        padding: 35px 15px;
     }
 
-    header p {
+    .header-content img {
+        width: 75px;
+    }
+
+    .header-content h1 {
+        font-size: 1.9em;
+    }
+
+    .header-content p {
         font-size: 1em;
-    }
-
-    header img {
-        width: 80px;
-        top: 10px;
     }
 
     .container {
@@ -218,40 +191,35 @@ header::after {
 
     button {
         width: 100%;
-        padding: 14px;
         font-size: 16px;
+    }
+
+    .menu {
+        gap: 18px;
     }
 }
 
 /* EXTRA SMALL DEVICES */
 @media (max-width: 480px) {
 
-    header {
-        padding: 35px 15px;
+    .header-content img {
+        width: 65px;
     }
 
-    .menu {
-        gap: 15px;
+    .header-content h1 {
+        font-size: 1.7em;
+    }
+
+    .header-content p {
+        font-size: 0.95em;
     }
 
     .menu-item img {
-        max-width: 120px;
+        max-width: 130px;
     }
 }
+</style>
 
-
-.note {
-    background-color: #ffeb3b; /* Yellow background */
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
-}
-
-  </style>
 </head>
 <body>
   <header>
@@ -695,6 +663,7 @@ document.querySelectorAll('.quantity').forEach(input => {
   </script>
 </body>
 </html>
+
 
 
 
