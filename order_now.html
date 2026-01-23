@@ -44,11 +44,31 @@ header::after {
     gap: 6px;
 }
 
-/* LOGO */
+/* LOGO – DESKTOP */
 .header-content img {
     width: 90px;
     height: auto;
+    object-fit: contain;
 }
+
+/* LOGO – MOBILE FIX (CRITICAL) */
+@media (max-width: 768px) {
+    .header-content img {
+        width: 70px;
+        max-width: 70px;
+        height: auto;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content img {
+        width: 60px;
+        max-width: 60px;
+        height: auto;
+    }
+}
+
 
 /* NAME */
 .header-content h1 {
@@ -663,6 +683,7 @@ document.querySelectorAll('.quantity').forEach(input => {
   </script>
 </body>
 </html>
+
 
 
 
