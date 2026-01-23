@@ -564,7 +564,7 @@ document.querySelectorAll('.quantity').forEach(input => {
     const specialInstructions = form.querySelector('#special-instructions').value.trim();
     const paymentMethod = form.querySelector('input[name="payment_method"]:checked')?.value;
 
-    if (!name || !className || !landmark || !paymentMethod) {
+    if (!name || !className || !paymentMethod) {
         alert('Please fill all required fields.');
         return;
     }
@@ -600,6 +600,7 @@ document.querySelectorAll('.quantity').forEach(input => {
   </script>
 </body>
 </html>
+
 
 
 
